@@ -1,0 +1,91 @@
+# configuration file
+# all the settings must be defined unless otherwise stated
+
+# marching cubes settings
+
+    numCubesX = 600
+    numCubesY = 24
+    numCubesZ = 600
+
+    cubeSize = 0.07
+    minRegionSize = 10000
+
+# noise generation settings
+
+    surfaceLevel = 15. # = noise threshold to be considered as a surface
+
+    noiseScale = 3.25
+    lacunarity = 0.996
+    persistence = 1.00
+    octaves = 8
+
+    closeEdges = true
+
+    floorOffset = 20.
+    hardFloor = 2.
+    floorWeight = 100.
+
+    noiseWeight = 50.
+
+    stepSizeX = 255.
+    stepSizeY = 255.
+    stepWeightX = 0.1755
+    stepWeightY = 0.1755
+
+    # terrain offset and seed
+    # if seed is defined, the offsets are calculated based on that seed, otherwise seed is random
+    # if any of the offsets are defined, the given value of the offset component replaces the generated one
+    # the randomizeOnGeneration option must be set to false for the seed to be take in account
+
+        # offsetSeed = 22991
+        # offsetX = 0.
+        offsetY = 65. # better keep y offset to 0 to keep the floor's parameters relevant
+        # offsetZ = 0.
+
+    # mesh color
+    meshColorR = 1.
+    meshColorG = 0.7
+    meshColorB = 0.5
+
+
+# boids settings
+
+    # main color
+    boidColorR = 0.8
+    boidColorG = 0.7
+    boidColorB = 0.5
+    boidColorDeviation = 0.2
+
+    applyLightingOnBoids = true
+
+    boidWidth = 0.12
+    boidHeight = 0.2
+
+    numBoids = 50000
+
+    minSpeed = 0.11
+    maxSpeed = 1.5
+    maxForce = 0.05
+
+    viewRadius = 1.
+    viewAngle = 60. # angle in degrees
+    avoidRadius = 0.5
+
+    predictionLength = 1. # how far ahead should the boid look for collisions
+    numRayDirs = 100
+
+    cohesionCoef = 15.
+    alignmentCoef = 20.
+    separationCoef = 30.
+    obstacleCoef = 80.
+
+
+# program settings
+    randomizeOnGeneration = true # change the seed randomly on each new generation
+    enableMeshOnStart = true
+
+
+# camera
+    rotSpeed = 0.3
+    zoomSpeed = 0.5
+    translateSpeed = 0.6
